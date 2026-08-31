@@ -9,6 +9,8 @@ m=[10,111,1,9,5,67,2]
 # 2) n can have 10**8
 # 3) m can have 10**8
 
+#@ m ke ander ke elements(jo hume questipon me mention he ) n ke ander kitni baar aye he 
+
 # we just need to tell how many times times the elements in m are there in n
 #@ how manay times 10 appear in n list 
 
@@ -45,3 +47,26 @@ for num4 in m:
 # here the TC is 0(m+n) which is ( 10**8+10**8=  2*10***)
 
 # the finale TC is (~10**8) THIS IS CALLED HASHING  
+
+#========================================================
+
+#solving using the dictionary 
+
+
+# the code is not complete i am still figuring it out and droping it for later and going to the lecture again 
+my_dict={}
+for rum in range(0,len(n)):
+    if n[rum] not in my_dict:
+        my_dict[n[rum]]=1
+
+    else:
+        my_dict[n[rum]]+=1
+k=[]
+for aum in range(0,len(m)):
+    if m[aum] in my_dict:
+        k.append(aum)
+
+    else:
+        k.append(0)
+print(k)
+                 
